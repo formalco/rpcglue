@@ -1,7 +1,7 @@
 package writer
 
 import (
-	"github.com/segmentio/glue/log"
+	"github.com/formalco/rpcglue/log"
 )
 
 type StdoutWriter struct{}

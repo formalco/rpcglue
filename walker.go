@@ -1,14 +1,14 @@
-package glue
+package rpcglue
 
 import (
 	"errors"
 	"fmt"
 	"sync"
 
-	"github.com/segmentio/glue/generator"
-	"github.com/segmentio/glue/log"
-	"github.com/segmentio/glue/provider"
-	"github.com/segmentio/glue/writer"
+	"github.com/formalco/rpcglue/generator"
+	"github.com/formalco/rpcglue/log"
+	"github.com/formalco/rpcglue/provider"
+	"github.com/formalco/rpcglue/writer"
 	"golang.org/x/tools/go/loader"
 )
 

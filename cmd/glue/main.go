@@ -4,12 +4,12 @@ import (
 	"flag"
 	"os"
 
-	"github.com/segmentio/glue"
-	"github.com/segmentio/glue/log"
-	"github.com/segmentio/glue/provider"
-	"github.com/segmentio/glue/provider/gorilla"
-	"github.com/segmentio/glue/provider/stl"
-	"github.com/segmentio/glue/writer"
+	"github.com/formalco/rpcglue"
+	"github.com/formalco/rpcglue/log"
+	"github.com/formalco/rpcglue/provider"
+	"github.com/formalco/rpcglue/provider/gorilla"
+	"github.com/formalco/rpcglue/provider/stl"
+	"github.com/formalco/rpcglue/writer"
 )
 
 var debug = flag.Bool("debug", false, "enable debug logs")
@@ -58,7 +58,7 @@ func main() {
 		provider = gorilla.New(provider)
 	}
 
-	walker := glue.Walker{
+	walker := rpcglue.Walker{
 		Provider: provider,
 		Writer:   wr,
 	}
@@ -71,7 +71,7 @@ func main() {
 		path = args[0]
 	}
 
-	err := walker.Walk(glue.Directions{
+	err := walker.Walk(rpcglue.Directions{
 		Path:    path,
 		Name:    *name,
 		Service: *service,

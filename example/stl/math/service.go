@@ -3,7 +3,7 @@ package math
 import (
 	gmath "math"
 
-	"github.com/segmentio/glue/example/stl/math/math"
+	"github.com/formalco/rpcglue/example/stl/math/math"
 )
 
 //go:generate glue -name Service -service Math

@@ -3,7 +3,7 @@ package gorilla
 import (
 	"go/types"
 
-	"github.com/segmentio/glue/provider"
+	"github.com/formalco/rpcglue/provider"
 )
 
 // Provider is a Glue provider for gorilla/rpc.

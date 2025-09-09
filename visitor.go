@@ -1,10 +1,10 @@
-package glue
+package rpcglue
 
 import (
 	"go/ast"
 	"go/types"
 
-	"github.com/segmentio/glue/provider"
+	"github.com/formalco/rpcglue/provider"
 
 	"golang.org/x/tools/go/loader"
 )

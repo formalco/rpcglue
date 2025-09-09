@@ -1,8 +1,6 @@
-module github.com/segmentio/glue
+module github.com/formalco/rpcglue
 
 go 1.24.5
-
-replace github.com/segmentio/glue => .
 
 require (
 	github.com/gohttp/jsonrpc-client v0.0.0-20180208231354-a0ad1114c5de

@@ -5,7 +5,7 @@ import (
 	"go/types"
 	"log"
 
-	"github.com/segmentio/glue/provider"
+	"github.com/formalco/rpcglue/provider"
 
 	"golang.org/x/tools/imports"
 )

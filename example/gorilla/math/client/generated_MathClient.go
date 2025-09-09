@@ -1,9 +1,9 @@
 package client
 
 import (
-	"github.com/segmentio/glue/client"
+	"github.com/formalco/rpcglue/client"
 
-	"github.com/segmentio/glue/example/gorilla/math"
+	"github.com/formalco/rpcglue/example/gorilla/math"
 )
 
 func NewMathClient(rpcClient client.Client) *Math {

@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/segmentio/glue/log"
+	"github.com/formalco/rpcglue/log"
 )
 
 type FileWriter struct {
