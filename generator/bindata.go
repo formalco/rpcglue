@@ -1,7 +1,7 @@
-// Code generated for package main by go-bindata DO NOT EDIT. (@generated)
+// Code generated for package generator by go-bindata DO NOT EDIT. (@generated)
 // sources:
 // templates/client.gohtml
-package main
+package generator
 
 import (
 	"bytes"
