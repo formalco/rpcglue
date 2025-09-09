@@ -1,0 +1,16 @@
+github.com/abursavich/nett v0.0.0-20150117192851-f31118c7aeb9 h1:OeQvv5hx/yfOZqdiM+jIEy7EHk+/1JHIHNS4pXp5k04=
+github.com/abursavich/nett v0.0.0-20150117192851-f31118c7aeb9/go.mod h1:QX0VIfZrWv686wl4JMj+JqZSP8czRNAEp8t7Ha8kjwo=
+github.com/gohttp/jsonrpc-client v0.0.0-20180208231354-a0ad1114c5de h1:NtOhIup7eAnYsCqP5R78TbCrPKPF34Oug9iCC/bhWtQ=
+github.com/gohttp/jsonrpc-client v0.0.0-20180208231354-a0ad1114c5de/go.mod h1:Gy8qTDJAgiANjkqj/tSuhFj4fpFVBvQ341b2nIbv77g=
+github.com/gohttp/rpc v0.0.0-20150622193010-f58084197079 h1:6GM+g4c9L1wuugsX9SZwPoFNwm/mpGgnkGmQOGj8iEI=
+github.com/gohttp/rpc v0.0.0-20150622193010-f58084197079/go.mod h1:Tpd6ZqVRqQ5dHkbOjDtPbY1PqmoO9NqtgU0EOcSBUxo=
+github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
+github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
+github.com/gorilla/rpc v1.2.1 h1:yC+LMV5esttgpVvNORL/xX4jvTTEUE30UZhZ5JF7K9k=
+github.com/gorilla/rpc v1.2.1/go.mod h1:uNpOihAlF5xRFLuTYhfR0yfCTm0WTQSQttkMSptRfGk=
+golang.org/x/mod v0.27.0 h1:kb+q2PyFnEADO2IEF935ehFUXlWiNjJWtRNgBLSfbxQ=
+golang.org/x/mod v0.27.0/go.mod h1:rWI627Fq0DEoudcK+MBkNkCe0EetEaDSwJJkCcjpazc=
+golang.org/x/sync v0.16.0 h1:ycBJEhp9p4vXvUZNszeOq0kGTPghopOL8q0fq3vstxw=
+golang.org/x/sync v0.16.0/go.mod h1:1dzgHSNfp02xaA81J2MS99Qcpr2w7fw1gpm99rleRqA=
+golang.org/x/tools v0.36.0 h1:kWS0uv/zsvHEle1LbV5LE8QujrxB3wfQyxHfhOk0Qkg=
+golang.org/x/tools v0.36.0/go.mod h1:WBDiHKJK8YgLHlcQPYQzNCkUxUypCaa5ZegCVutKm+s=
