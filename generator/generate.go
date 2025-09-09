@@ -24,15 +24,29 @@ func Generate(in GenerateInput) ([]byte, error) {
 		Service: in.Service,
 	}
 
+	emptyStruct := types.NewStruct(nil, nil)
+
 	resolver := newResolver()
 	for _, f := range in.Funcs {
 		argT := in.Provider.GetArgType(f)
 		replyT := in.Provider.GetReplyType(f)
 
+		var argType string
+		if !types.Identical(argT, emptyStruct) {
+			argType = resolver.GetTypeString(argT)
+		}
+
+		actualReplyType := resolver.GetTypeString(replyT)
+		var replyType string
+		if !types.Identical(replyT, emptyStruct) {
+			replyType = actualReplyType
+		}
+
 		data.Methods = append(data.Methods, MethodTemplate{
-			Name:      f.Name(),
-			ArgType:   resolver.GetTypeString(argT),
-			ReplyType: resolver.GetTypeString(replyT),
+			Name:            f.Name(),
+			ArgType:         argType,
+			ReplyType:       replyType,
+			ActualReplyType: actualReplyType,
 		})
 	}
 

@@ -23,10 +23,12 @@ type TemplateData struct {
 type MethodTemplate struct {
 	// Name is the name of the RPC method.
 	Name string
-	// ArgType is the name of the RPC argument type (e.g. `string`).
+	// ArgType is the name of the RPC argument type (e.g. `string`). In the special case of struct{}, the RPC call will not take an argument.
 	ArgType string
-	// ReplyType is the name of the RPC response type (e.g. `string`).
+	// ReplyType is a modified name of the RPC response type. The special case is struct{}, which causes the RPC call to not return a response.
 	ReplyType string
+	// ActualReplyType is the actual name of the RPC response type (e.g. `string`).
+	ActualReplyType string
 }
 
 type Import struct {

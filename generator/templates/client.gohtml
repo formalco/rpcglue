@@ -15,7 +15,7 @@ func New{{ .Service }}Client(rpcClient client.Client) *{{ .Service }} {
 
 type {{ .Service }}IFace interface {
   {{ range .Methods }}
-    {{ .Name }}(args {{ .ArgType }}) ({{ .ReplyType }}, error)
+    {{ .Name }}({{ if .ArgType }}args {{ .ArgType }}{{ end }}) ({{ if .ReplyType }}{{ .ReplyType }}, {{ end }}error)
   {{ end }}
 }
 
@@ -24,9 +24,17 @@ type {{ .Service }} struct {
 }
 
 {{ range .Methods }}
-  func (c *{{ $.Service }}) {{ .Name }}(args {{ .ArgType }}) ({{ .ReplyType }}, error) {
-    var reply {{ .ReplyType }}
+  func (c *{{ $.Service }}) {{ .Name }}({{ if .ArgType }}args {{ .ArgType }}{{ end }}) {{ if .ReplyType }}({{ .ReplyType }}, error){{ else }}error{{ end }} {
+    var reply {{ .ActualReplyType }}
+    {{ if .ArgType }}
     err := c.RPC.Call("{{ $.Service }}.{{ .Name }}", args, &reply)
+    {{ else }}
+    err := c.RPC.Call("{{ $.Service }}.{{ .Name }}", struct{}{}, &reply)
+    {{ end }}
+    {{ if .ReplyType }}
     return reply, err
+    {{ else }}
+    return err
+    {{ end }}
   }
 {{ end }}
