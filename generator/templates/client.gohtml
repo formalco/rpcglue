@@ -24,17 +24,13 @@ type {{ .Service }} struct {
 }
 
 {{ range .Methods }}
-  func (c *{{ $.Service }}) {{ .Name }}({{ if .ArgType }}args {{ .ArgType }}{{ end }}) {{ if .ReplyType }}({{ .ReplyType }}, error){{ else }}error{{ end }} {
+  func (c *{{ $.Service }}) {{ .Name }}({{ if .ArgType }}args {{ .ArgType }}{{ end }}) ({{ if .ReplyType }}{{ .ReplyType }}, {{ end }}error) {
     var reply {{ .ActualReplyType }}
-    {{ if .ArgType }}
-    err := c.RPC.Call("{{ $.Service }}.{{ .Name }}", args, &reply)
-    {{ else }}
-    err := c.RPC.Call("{{ $.Service }}.{{ .Name }}", struct{}{}, &reply)
-    {{ end }}
-    {{ if .ReplyType }}
-    return reply, err
-    {{ else }}
-    return err
-    {{ end }}
+    err := c.RPC.Call(
+      "{{ $.Service }}.{{ .Name }}",
+      {{ if .ArgType }}args,{{ else }}struct{}{},{{ end }}
+      &reply,
+    )
+    return {{ if .ReplyType}}reply, {{ end }}err
   }
 {{ end }}
