@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/segmentio/glue/client"
+	"github.com/formalco/rpcglue/client"
 
 	"github.com/formalco/rpcglue/example/stl/math"
 	math1 "github.com/formalco/rpcglue/example/stl/math/math"
